@@ -20,5 +20,8 @@ public class Pokemon {
     @NotBlank(message = "El tipo no puede estar vacío.")
     private String tipo;
     private int nivel;
+    @ManyToOne
+    @JoinColumn(name = "equipo_id")
+    private Equipo equipo;
 
 }
